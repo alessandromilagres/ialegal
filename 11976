@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI Ecosystem — Análise Estratégica Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1a5f3f;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 0.5rem 1rem;
+            background: #e8f5e9;
+            color: #1a5f3f;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        nav a:hover {
+            background: #1a5f3f;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero .subtitle {
+            font-size: 2rem;
+            color: #1a5f3f;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a5f3f;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            border-bottom: 3px solid #1a5f3f;
+            padding-bottom: 1rem;
+        }
+
+        section h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a5f3f;
+        }
+
+        section h4 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        table th {
+            background: #f0f0f0;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #1a5f3f;
+        }
+
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .pillar {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1a5f3f;
+        }
+
+        .pillar h4 {
+            color: #1a5f3f;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .phase {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #1a5f3f;
+            border-radius: 4px;
+        }
+
+        .phase h4 {
+            color: #1a5f3f;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase ul {
+            margin-left: 1.5rem;
+        }
+
+        .highlight {
+            background: #f0f8f5;
+            padding: 2rem;
+            border-left: 4px solid #1a5f3f;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight p {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .risk-item {
+            background: #fff3e0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+
+        .risk-item h4 {
+            color: #e65100;
+            margin-bottom: 0.5rem;
+        }
+
+        .risk-item .severity {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #ff9800;
+            color: #fff;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: #e8f5e9;
+            color: #1a5f3f;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .risk-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🏛️ Legal AI Ecosystem</div>
+            <div class="links">
+                <a onclick="scrollToSection('defesa')">Defesa</a>
+                <a onclick="scrollToSection('prd')">PRD</a>
+                <a onclick="scrollToSection('conceitos')">Conceitos</a>
+                <a onclick="scrollToSection('arquitetura')">Arquitetura</a>
+                <a onclick="scrollToSection('stack')">Stack</a>
+                <a onclick="scrollToSection('mvp')">MVP 90</a>
+                <a onclick="scrollToSection('roadmap')">Roadmap</a>
+                <a onclick="scrollToSection('lgpd')">LGPD</a>
+                <a onclick="scrollToSection('riscos')">Riscos</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Legal AI Ecosystem</h1>
+        <p class="subtitle">Transformando a advocacia com inteligência artificial</p>
+        <p>Plano completo para construir a plataforma de IA mais inteligente do mercado jurídico brasileiro — AI-first, compliance by design, agentes autônomos e modelo híbrido de tecnologia + educação.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">R$ 180B</div>
+                <div class="stat-label">TAM — Mercado jurídico BR</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">1,3M</div>
+                <div class="stat-label">Advogados ativos no Brasil</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">60%</div>
+                <div class="stat-label">Tempo perdido em tarefas repetitivas</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">~35%</div>
+                <div class="stat-label">Churn anual em softwares jurídicos</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="defesa">
+            <h2>Defesa do Produto</h2>
+            
+            <div class="highlight">
+                <p>🎯 <strong>Tese de Produto:</strong> "Criar a plataforma de IA mais inteligente e acessível do mercado jurídico brasileiro, transformando o 'advogado artesanal' em 'Advogado Aumentado' — com automação de rotinas, inteligência de dados, agentes autônomos e educação contínua integrada."</p>
+            </div>
+
+            <h3>Os 5 Pilares do Produto Vencedor</h3>
+            <div class="pillars">
+                <div class="pillar">
+                    <h4>🤖 IA Transversal Validada</h4>
+                    <p>Não só em documentos — em pesquisa jurídica, análise de jurisprudência, triagem de casos e gestão de clientes. Validação humana obrigatória.</p>
+                </div>
+                <div class="pillar">
+                    <h4>🔗 Agentes Autônomos Jurídicos</h4>
+                    <p>Programas de IA que executam tarefas específicas sem supervisão contínua: triagem de clientes, organização de documentos, análise de padrões em jurisprudência.</p>
+                </div>
+                <div class="pillar">
+                    <h4>📊 Inteligência de Dados</h4>
+                    <p>Análise preditiva de jurisprudência, gestão de casos com insights, previsibilidade de resultados.</p>
+                </div>
+                <div class="pillar">
+                    <h4>🛡️ Compliance Verificável</h4>
+                    <p>LGPD, OAB, sigilo profissional desde o MVP. Não como marketing — como arquitetura real.</p>
+                </div>
+                <div class="pillar">
+                    <h4>🎓 Universidade Legal AI</h4>
+                    <p>Educação contínua integrada. Modelo híbrido: tecnologia + educação.</p>
+                </div>
+            </div>
+
+            <h3>Por Que Agora?</h3>
+            <ul>
+                <li><strong>Urgência de IA:</strong> Quem não tiver IA vai parecer legado em 18 meses.</li>
+                <li><strong>Mercado Fragmentado:</strong> 1,3M de advogados, maioria operando de forma artesanal.</li>
+                <li><strong>Churn Alto:</strong> ~35% de churn anual nos players atuais.</li>
+                <li><strong>Modelo Híbrido Diferenciado:</strong> Ninguém une tecnologia + educação no mercado jurídico.</li>
+            </ul>
+        </section>
+
+        <section id="prd">
+            <h2>Product Requirements Document (PRD)</h2>
+
+            <h3>Visão Geral</h3>
+            <p>Legal AI Ecosystem é uma plataforma SaaS que transforma a operação de advogados através de automação inteligente, análise de dados e agentes autônomos — complementada por um programa de educação contínua (Universidade Legal AI).</p>
+
+            <h3>Escopo do MVP 90 Dias</h3>
+            <div class="phase">
+                <h4>01 — Automação de Documentos</h4>
+                <p>Geração automática de peças jurídicas com templates inteligentes e IA generativa.</p>
+                <span class="badge">must-have</span>
+            </div>
+            <div class="phase">
+                <h4>02 — Pesquisa Jurídica Inteligente</h4>
+                <p>Busca em jurisprudência, legislação e doutrina com análise de relevância.</p>
+                <span class="badge">must-have</span>
+            </div>
+            <div class="phase">
+                <h4>03 — Gestão de Casos</h4>
+                <p>Cadastro de clientes, casos, prazos, documentos com timeline visual.</p>
+                <span class="badge">must-have</span>
+            </div>
+            <div class="phase">
+                <h4>04 — Agente de Triagem Inicial</h4>
+                <p>Chatbot que faz triagem inicial de clientes e coleta informações básicas.</p>
+                <span class="badge">must-have</span>
+            </div>
+            <div class="phase">
+                <h4>05 — Dashboard de Insights</h4>
+                <p>Visão consolidada com recomendações baseadas em IA.</p>
+                <span class="badge">must-have</span>
+            </div>
+
+            <h3>Requisitos Não-Funcionais</h3>
+            <ul>
+                <li><strong>Performance:</strong> Busca &lt; 2s. Geração de documento &lt; 5s.</li>
+                <li><strong>Disponibilidade:</strong> 99.9% uptime.</li>
+                <li><strong>Segurança:</strong> Criptografia AES-256, Audit log imutável.</li>
+                <li><strong>Compliance:</strong> LGPD, OAB, sigilo profissional desde o dia 1.</li>
+            </ul>
+        </section>
+
+        <section id="conceitos">
+            <h2>Conceitos-Chave</h2>
+
+            <h3>Advogado Aumentado</h3>
+            <p>Não é um advogado substituído por IA. É um advogado que usa IA como extensão de suas capacidades.</p>
+
+            <h3>Agentes Autônomos Jurídicos</h3>
+            <p>Programas de IA que executam tarefas específicas sem supervisão contínua.</p>
+
+            <h3>Modelo Híbrido: Tecnologia + Educação</h3>
+            <p>Não entregamos só uma ferramenta complexa. Entregamos a "Universidade Legal AI".</p>
+
+            <h3>Compliance by Design</h3>
+            <p>LGPD, OAB, sigilo profissional não são retrofit — são parte da arquitetura desde o dia 1.</p>
+
+            <h3>Human-in-the-Loop</h3>
+            <p>Toda decisão crítica passa por validação humana. IA sugere, advogado decide.</p>
+        </section>
+
+        <section id="arquitetura">
+            <h2>Arquitetura Cloud-Native</h2>
+
+            <h3>Princípios</h3>
+            <ul>
+                <li>100% nuvem — sem servidores on-premise</li>
+                <li>Containerizado com Docker — portável, escalável</li>
+                <li>Multicloud ready — não preso a um único provedor</li>
+                <li>Serverless onde possível — reduz custo operacional</li>
+                <li>Infrastructure as Code — toda infra versionada no Git</li>
+            </ul>
+
+            <h3>Componentes Principais</h3>
+            <table>
+                <tr>
+                    <th>Camada</th>
+                    <th>Tecnologia</th>
+                    <th>Justificativa</th>
+                </tr>
+                <tr>
+                    <td><strong>Frontend</strong></td>
+                    <td>React 19 + Vite 7 + TypeScript</td>
+                    <td>CSR, fast HMR, lightweight, mobile-ready</td>
+                </tr>
+                <tr>
+                    <td><strong>Backend API</strong></td>
+                    <td>Node.js + Express / Fastify</td>
+                    <td>Rápido, escalável, mesmo ecossistema</td>
+                </tr>
+                <tr>
+                    <td><strong>Database</strong></td>
+                    <td>PostgreSQL (Supabase ou RDS)</td>
+                    <td>ACID, JSON nativo, backups automáticos</td>
+                </tr>
+                <tr>
+                    <td><strong>Cache</strong></td>
+                    <td>Redis (ElastiCache / Upstash)</td>
+                    <td>Sessões, rate limiting, cache</td>
+                </tr>
+                <tr>
+                    <td><strong>Busca</strong></td>
+                    <td>Elasticsearch / OpenSearch</td>
+                    <td>Busca full-text em jurisprudência</td>
+                </tr>
+                <tr>
+                    <td><strong>IA / LLM</strong></td>
+                    <td>OpenAI API / Claude / Llama</td>
+                    <td>Geração de documentos, resumos</td>
+                </tr>
+                <tr>
+                    <td><strong>Armazenamento</strong></td>
+                    <td>S3 / Google Cloud Storage</td>
+                    <td>Documentos, backups, replicação</td>
+                </tr>
+                <tr>
+                    <td><strong>Filas</strong></td>
+                    <td>AWS SQS / RabbitMQ / Bull</td>
+                    <td>Processamento assíncrono</td>
+                </tr>
+                <tr>
+                    <td><strong>Logs / Monitoring</strong></td>
+                    <td>DataDog / New Relic / ELK Stack</td>
+                    <td>Observabilidade, alertas</td>
+                </tr>
+            </table>
+
+            <h3>Segurança em Camadas</h3>
+            <ul>
+                <li><strong>Rede:</strong> VPC isolada, security groups, WAF</li>
+                <li><strong>Dados:</strong> Criptografia AES-256 em repouso, TLS 1.3 em trânsito</li>
+                <li><strong>Acesso:</strong> RBAC granular, MFA obrigatório, audit log imutável</li>
+                <li><strong>Compliance:</strong> Certificações SOC2, ISO 27001 (roadmap)</li>
+            </ul>
+        </section>
+
+        <section id="stack">
+            <h2>Stack Técnico Detalhado</h2>
+
+            <h3>Frontend React</h3>
+            <ul>
+                <li>• <strong>Framework:</strong> React 19 + Vite 7</li>
+                <li>• <strong>Linguagem:</strong> TypeScript 5.6</li>
+                <li>• <strong>Styling:</strong> Tailwind CSS 4 + Tailwind Merge</li>
+                <li>• <strong>UI Components:</strong> Shadcn/ui (Radix UI primitives)</li>
+                <li>• <strong>Routing:</strong> Wouter (lightweight client-side router)</li>
+                <li>• <strong>State Management:</strong> Zustand / React Context</li>
+                <li>• <strong>Data Fetching:</strong> TanStack Query (React Query)</li>
+                <li>• <strong>Form Handling:</strong> React Hook Form + Zod validation</li>
+                <li>• <strong>Icons:</strong> Lucide React</li>
+                <li>• <strong>Animations:</strong> Framer Motion + Tailwind Animate</li>
+                <li>• <strong>Notifications:</strong> Sonner (toast notifications)</li>
+                <li>• <strong>Build Tool:</strong> Vite (HMR, fast builds, optimized bundles)</li>
+                <li>• <strong>Package Manager:</strong> pnpm (fast, disk-efficient)</li>
+                <li>• <strong>Deploy:</strong> GitHub Pages / Vercel / AWS S3 + CloudFront</li>
+            </ul>
+
+            <h3>Backend</h3>
+            <ul>
+                <li>• <strong>Runtime:</strong> Node.js 20 LTS</li>
+                <li>• <strong>Framework:</strong> Fastify / Express</li>
+                <li>• <strong>Linguagem:</strong> TypeScript</li>
+                <li>• <strong>ORM:</strong> Prisma / Drizzle</li>
+                <li>• <strong>Auth:</strong> Supabase Auth / Auth0</li>
+            </ul>
+
+            <h3>Database</h3>
+            <ul>
+                <li>• <strong>Principal:</strong> PostgreSQL 15+</li>
+                <li>• <strong>Provedor:</strong> Supabase / AWS RDS</li>
+                <li>• <strong>Backup:</strong> Automático a cada 1h, retenção 30 dias</li>
+                <li>• <strong>Replicação:</strong> Multi-AZ para HA</li>
+            </ul>
+
+            <h3>IA & LLM</h3>
+            <ul>
+                <li>• <strong>Geração de Texto:</strong> OpenAI GPT-4 / Claude 3</li>
+                <li>• <strong>Embedding:</strong> OpenAI Embeddings / Cohere</li>
+                <li>• <strong>Orquestração:</strong> LangChain / LlamaIndex</li>
+                <li>• <strong>Self-hosted (roadmap):</strong> Llama 2 / Mistral em GPU</li>
+            </ul>
+
+            <h3>Infraestrutura</h3>
+            <ul>
+                <li>• <strong>Container:</strong> Docker</li>
+                <li>• <strong>Orquestração:</strong> ECS / Kubernetes (EKS)</li>
+                <li>• <strong>CI/CD:</strong> GitHub Actions</li>
+                <li>• <strong>IaC:</strong> Terraform / CDK</li>
+                <li>• <strong>Monitoring:</strong> DataDog / Prometheus + Grafana</li>
+            </ul>
+        </section>
+
+        <section id="mvp">
+            <h2>MVP 90 Dias — Execução</h2>
+
+            <div class="phase">
+                <h4>Sprint 0: Dias 1–15 — Fundação Técnica</h4>
+                <ul>
+                    <li>Setup React + Fastify + PostgreSQL</li>
+                    <li>Supabase Auth com MFA</li>
+                    <li>CI/CD com GitHub Actions</li>
+                    <li>Ambientes dev/staging/prod</li>
+                    <li>Modelo de dados inicial</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Sprint 1: Dias 16–35 — Core Clínico</h4>
+                <ul>
+                    <li>Gestão de casos (CRUD completo)</li>
+                    <li>Cadastro de clientes com consentimento LGPD</li>
+                    <li>Automação de documentos (templates básicos + IA)</li>
+                    <li>Pesquisa em jurisprudência (Elasticsearch)</li>
+                    <li>Agente de triagem (chatbot básico)</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Sprint 2: Dias 36–55 — Documentos e Cobrança</h4>
+                <ul>
+                    <li>Geração de peças jurídicas</li>
+                    <li>Assinatura digital (ICP-Brasil)</li>
+                    <li>Dashboard com insights</li>
+                    <li>Audit log imutável</li>
+                    <li>Alertas de prazos críticos</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h4>Sprint 3: Dias 56–90 — Validação com Usuário Real</h4>
+                <ul>
+                    <li>Piloto com 2 advogados reais</li>
+                    <li>Feedback e ajustes de UX</li>
+                    <li>Documentação legal</li>
+                    <li>Testes de segurança e compliance</li>
+                    <li>Preparação para Série A</li>
+                </ul>
+            </div>
+
+            <h3>Métricas de Sucesso do MVP</h3>
+            <ul>
+                <li>✅ 2 advogados reais usando em produção</li>
+                <li>✅ Redução de 40% no tempo de tarefas repetitivas</li>
+                <li>✅ 99.9% uptime</li>
+                <li>✅ Compliance LGPD/OAB validado</li>
+                <li>✅ NPS &gt; 50</li>
+                <li>✅ Churn = 0%</li>
+            </ul>
+        </section>
+
+        <section id="roadmap">
+            <h2>Roadmap Construtivo (90+ Dias)</h2>
+
+            <h3>Fase 2: Meses 4–6 — Escala e Educação</h3>
+            <ul>
+                <li>Universidade Legal AI (programa de educação contínua)</li>
+                <li>Integração com tribunais (API de processos)</li>
+                <li>App mobile (iOS + Android)</li>
+                <li>Marketplace de especialistas (rede de advogados)</li>
+                <li>Análise preditiva de jurisprudência (ML)</li>
+            </ul>
+
+            <h3>Fase 3: Meses 7–12 — Profundidade e Monetização</h3>
+            <ul>
+                <li>Telemedicina jurídica (consultoria online)</li>
+                <li>White label para grandes escritórios</li>
+                <li>Integração com sistemas de contabilidade</li>
+                <li>IA de transcrição de audiências</li>
+                <li>Modelo de receita por transação (marketplace)</li>
+            </ul>
+
+            <h3>Fase 4: Ano 2+ — Expansão Regional</h3>
+            <ul>
+                <li>Expansão para América Latina (México, Argentina, Chile)</li>
+                <li>Integração com legislação internacional</li>
+                <li>Agentes autônomos avançados (tomada de decisão)</li>
+                <li>Modelo de IA self-hosted (Llama 2 em GPU)</li>
+                <li>Partnerships com universidades de Direito</li>
+            </ul>
+        </section>
+
+        <section id="lgpd">
+            <h2>LGPD e Conformidade</h2>
+
+            <h3>Por Que LGPD é Crítica em Advocacia?</h3>
+            <p>Dados de clientes são sensíveis por padrão. Em Direito, o risco não é só multa da ANPD — é processo ético no OAB e ação civil do cliente.</p>
+
+            <h3>Implementação Técnica Obrigatória no MVP</h3>
+            <div class="pillars">
+                <div class="pillar">
+                    <h4>🔐 Criptografia em Repouso</h4>
+                    <p>AES-256 para todos os campos sensíveis. Dados de clientes NUNCA armazenados em texto plano.</p>
+                </div>
+                <div class="pillar">
+                    <h4>📝 Audit Log Imutável</h4>
+                    <p>Quem leu, quem escreveu, quando, de qual IP. Tabela append-only sem UPDATE ou DELETE.</p>
+                </div>
+                <div class="pillar">
+                    <h4>👥 RBAC Granular</h4>
+                    <p>Secretária não acessa campos clínicos. Advogado só vê clientes de sua agenda.</p>
+                </div>
+                <div class="pillar">
+                    <h4>✅ Consentimento Explícito</h4>
+                    <p>Checkbox separado por canal. Histórico de consentimento versionado.</p>
+                </div>
+            </div>
+
+            <h3>Direitos do Titular</h3>
+            <ul>
+                <li><strong>Acesso:</strong> Download de todos os dados em JSON/CSV em &lt; 15 dias</li>
+                <li><strong>Retificação:</strong> Editar dados pessoais em tempo real</li>
+                <li><strong>Exclusão:</strong> "Direito ao esquecimento" — deletar dados em &lt; 30 dias</li>
+                <li><strong>Portabilidade:</strong> Exportar dados em formato aberto</li>
+                <li><strong>Revogação de Consentimento:</strong> Opt-out de marketing em 1 clique</li>
+            </ul>
+        </section>
+
+        <section id="riscos">
+            <h2>Análise de Riscos</h2>
+
+            <div class="risk-grid">
+                <div class="risk-item">
+                    <h4>Regulação LGPD/OAB Mais Rigorosa</h4>
+                    <p>OAB pode impor requisitos mais estritos para IA em advocacia.</p>
+                    <span class="severity">Alto</span>
+                    <p><strong>Mitigação:</strong> Compliance by design desde o MVP. Diálogo proativo com OAB.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Concorrência de Grandes Players</h4>
+                    <p>iClinic, Feegow e GestãoDS com muito mais capital podem copiar features.</p>
+                    <span class="severity">Alto</span>
+                    <p><strong>Mitigação:</strong> Diferencial em educação + agentes autônomos. Velocidade de inovação.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Qualidade de IA Inconsistente</h4>
+                    <p>Geração de documentos com erros jurídicos críticos pode gerar liability.</p>
+                    <span class="severity">Crítico</span>
+                    <p><strong>Mitigação:</strong> Human-in-the-loop obrigatório. Validação por advogado especialista.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Breach de Dados / Vazamento</h4>
+                    <p>Dados de clientes vazados = destruição de reputação + ação civil.</p>
+                    <span class="severity">Crítico</span>
+                    <p><strong>Mitigação:</strong> Criptografia AES-256, audit log, penetration testing trimestral.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Churn Alto</h4>
+                    <p>Advogados trocam de sistema por UX ruim ou suporte precário.</p>
+                    <span class="severity">Médio</span>
+                    <p><strong>Mitigação:</strong> Foco em UX desde o MVP. Suporte 24/7. NPS &gt; 50.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Falta de Adoção</h4>
+                    <p>Advogados tradicionais podem resistir a IA em suas operações.</p>
+                    <span class="severity">Médio</span>
+                    <p><strong>Mitigação:</strong> Universidade Legal AI. Demonstração clara de ROI.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Custo de LLM Muito Alto</h4>
+                    <p>Chamadas para OpenAI/Claude podem inviabilizar modelo de negócio.</p>
+                    <span class="severity">Médio</span>
+                    <p><strong>Mitigação:</strong> Caching de respostas. Self-hosted Llama 2 em roadmap.</p>
+                </div>
+
+                <div class="risk-item">
+                    <h4>Integração com Tribunais Bloqueada</h4>
+                    <p>Tribunais podem não abrir APIs ou impor restrições severas.</p>
+                    <span class="severity">Baixo</span>
+                    <p><strong>Mitigação:</strong> Web scraping como fallback. Parcerias com sistemas de gestão.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Legal AI Ecosystem</strong> — Análise Estratégica Completa</p>
+        <p>Última atualização: 12 de maio de 2026</p>
+        <p>Autores: Alessandro Milagres + Aline Guedes Basset</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Este documento é confidencial e destinado apenas para avaliadores, investidores e parceiros estratégicos.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
